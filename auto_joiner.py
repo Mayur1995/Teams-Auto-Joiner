@@ -145,9 +145,15 @@ def init_browser():
 
     else:
         chrome_options = webdriver.ChromeOptions()
-
     chrome_options.add_argument('--ignore-certificate-errors')
     chrome_options.add_argument('--ignore-ssl-errors')
+    chrome_options.add_argument('--app-cache-force-enabled')
+    chrome_options.add_argument('--disable-accelerated-2d-canvas')
+    chrome_options.add_argument('--disable-gpu-rasterization')
+    chrome_options.add_argument('--override-use-software-gl-for-tests')
+    chrome_options.add_argument('--disable-zero-copy')
+    chrome_options.add_argument('--enable-zero-copy')
+    #chrome_options.add_argument('--disable-gpu-rasterization')
     chrome_options.add_argument('--use-fake-ui-for-media-stream')
     chrome_options.add_experimental_option('prefs', {
         'credentials_enable_service': False,
